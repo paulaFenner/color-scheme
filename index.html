@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Scheme</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <form>
+          <input type="color" name="color-picker" class="color-picker" id="color-picker" aria-label="Pick a color" />
+          <select class="scheme-title" name="scheme-title" id="scheme-title">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome-dark</option>
+            <option value="monochrome-light">Monochrome-light</option>
+            <option value="Analogic">Analogic</option>
+            <option value="Complement">Complement</option>
+            <option value="Analogic-complement">Analogic-complement</option>
+            <option value="Triad">Triad</option>
+          </select>
+          <button type="submit" aria-label="get a color scheme">Get color scheme</button>
+        </form>
+      </header>
+
+      <main>
+        <section class="palette-container">
+          <div class="color-container">
+            <div class="color-display" id="f55a5a"></div>
+            <p class="color-hex-code">#F55A5A</p>
+          </div>
+          <div class="color-container">
+            <div class="color-display" id="c2b283a"></div>
+            <p class="color-hex-code">#2B283A</p>
+          </div>
+          <div class="color-container">
+            <div class="color-display" id="fbf3ab"></div>
+            <p class="color-hex-code">#FBF3AB</p>
+          </div>
+          <div class="color-container">
+            <div class="color-display" id="aad1b6"></div>
+            <p class="color-hex-code">#AAD1B6</p>
+          </div>
+          <div class="color-container">
+            <div class="color-display" id="a626d3"></div>
+            <p class="color-hex-code">#A626D3</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
