@@ -123,12 +123,14 @@ button {
 /* TOAST NOTIFICATION */
 .toast-message {
   position: absolute;
-  bottom: 50%;
-  right: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--white);
   color: var(--dark-blue);
   padding: 0.5em 1em;
   border-radius: 0.5em;
+  text-align: center;
   display: none;
 }
 
