@@ -18,46 +18,29 @@
   <body>
     <div class="wrapper">
       <header>
+        <h1>Color scheme generator 🎨</h1>
         <form>
-          <input type="color" name="color-picker" class="color-picker" id="color-picker" aria-label="Pick a color" />
-          <select class="scheme-title" name="scheme-title" id="scheme-title">
+          <input type="color" name="seed-color" class="seed-color" id="seed-color" aria-label="Pick a color" />
+          <select class="scheme-mode" name="scheme-mode" id="scheme-mode">
             <option value="monochrome">Monochrome</option>
             <option value="monochrome-dark">Monochrome-dark</option>
             <option value="monochrome-light">Monochrome-light</option>
-            <option value="Analogic">Analogic</option>
-            <option value="Complement">Complement</option>
-            <option value="Analogic-complement">Analogic-complement</option>
-            <option value="Triad">Triad</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic-complement</option>
+            <option value="triad">Triad</option>
           </select>
-          <button type="submit" aria-label="get a color scheme">Get color scheme</button>
+          <button type="submit" id="get-scheme-btn" aria-label="generate a color scheme">Generate</button>
         </form>
       </header>
 
       <main>
-        <section class="palette-container">
-          <div class="color-container">
-            <div class="color-display" id="f55a5a"></div>
-            <p class="color-hex-code">#F55A5A</p>
-          </div>
-          <div class="color-container">
-            <div class="color-display" id="c2b283a"></div>
-            <p class="color-hex-code">#2B283A</p>
-          </div>
-          <div class="color-container">
-            <div class="color-display" id="fbf3ab"></div>
-            <p class="color-hex-code">#FBF3AB</p>
-          </div>
-          <div class="color-container">
-            <div class="color-display" id="aad1b6"></div>
-            <p class="color-hex-code">#AAD1B6</p>
-          </div>
-          <div class="color-container">
-            <div class="color-display" id="a626d3"></div>
-            <p class="color-hex-code">#A626D3</p>
-          </div>
+        <section class="scheme-color-container">
+          <!-- COLOR SCHEME WILL RENDER HERE -->
         </section>
+        <div id="toast" class="toast-message">Color copied to clipboard!</div>
       </main>
     </div>
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

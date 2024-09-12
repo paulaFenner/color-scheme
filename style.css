@@ -18,17 +18,28 @@ html {
   --dark-blue: #2b283a;
 }
 
+/* TYPOGRAPHY */
+h1 {
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+  margin-bottom: 1.25em;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* LAYOUT */
 .wrapper {
-  max-width: 550px;
+  position: relative;
+  width: 100%;
   margin: 0 auto;
-  /* margin: 2em auto; */
-  padding: 0.25em;
+  padding: 0.5em;
   background-color: var(--white);
-  /* border-radius: 0.5em; */
 }
 
 header {
-  padding: 2em 1.15em;
+  padding: 1.15em;
 }
 
 /* FORM */
@@ -38,14 +49,14 @@ form {
   gap: 1em;
 }
 
-.color-picker {
+.seed-color {
   height: auto;
   border: none;
   outline: none;
 }
 
-.scheme-title {
-  font-size: 1.33rem;
+.scheme-mode {
+  font-size: 1.15rem;
   padding: 0.5em 1em;
   flex-grow: 1;
 }
@@ -54,25 +65,25 @@ button {
   font-size: 1rem;
   padding: 1em;
 }
-.scheme-title,
+.scheme-mode,
 button {
   background-color: var(--white);
-  border: 1px solid var(--medium-grey);
-  border-radius: 4px;
+  border: 2px solid var(--medium-grey);
+  border-radius: 0.5em;
 }
 
-.color-picker,
-.scheme-title,
+.seed-color,
+.scheme-mode,
 button {
   align-items: center;
   cursor: pointer;
 }
 
-/* COLOR PALETTE */
-
-.palette-container,
+/* COLOR SCHEME */
+.scheme-color-container,
 .color-container {
   display: flex;
+  cursor: pointer;
 }
 
 .color-container {
@@ -86,19 +97,32 @@ button {
   height: 415px;
 }
 
-/* styling purposes - to be deleted */
-#f55a5a {
-  background-color: #f55a5a;
+.color-display,
+.color-hex-code {
+  cursor: pointer;
 }
-#c2b283a {
-  background-color: #2b283a;
+
+/* TOAST NOTIFICATION */
+.toast-message {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  background-color: var(--white);
+  color: var(--dark-blue);
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  display: none;
 }
-#fbf3ab {
-  background-color: #fbf3ab;
-}
-#aad1b6 {
-  background-color: #aad1b6;
-}
-#a626d3 {
-  background-color: #a626d3;
+
+/* BREAKPOINTS */
+@media (min-width: 768px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+  .wrapper {
+    max-width: 650px;
+    margin: 2em auto;
+    border-radius: 0.5em;
+  }
 }
