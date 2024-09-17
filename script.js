@@ -1,6 +1,4 @@
-// Submit on the form will work either by clicking the submit button or pressing Enter in an input field
-document.querySelector('form').addEventListener('submit', function (e) {
-  e.preventDefault();
+function generateColorScheme() {
   const colorHex = document.getElementById('seed-color').value.slice(1);
   const schemeMode = document.getElementById('scheme-mode').value;
 
@@ -10,6 +8,16 @@ document.querySelector('form').addEventListener('submit', function (e) {
     .catch((e) => {
       console.error('There was a problem with the fetch operation:', e);
     });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  generateColorScheme();
+});
+
+// // Submit on the form will work either by clicking the submit button or pressing Enter in an input field
+document.querySelector('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  generateColorScheme();
 });
 
 document.querySelector('main').addEventListener('click', function (e) {
